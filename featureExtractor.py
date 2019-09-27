@@ -94,9 +94,11 @@ class featureGenerator():
                         f.write('\n')
         if len(errorlog) > 0:
             print('[INFO] Error When Extracting: ')
-            for error in errorlog:
-                print('[-] ' + error)
-
+            with open('ErrorExtractIDA.log', 'w') as f:
+                for error in errorlog:
+                    e = '[-] ' + error
+                    print(e)
+                    f.write(e + '/n')
 
 
 

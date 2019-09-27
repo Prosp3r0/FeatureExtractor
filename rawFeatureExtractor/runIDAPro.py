@@ -17,7 +17,7 @@ def extractByIDAPro(binary_file_path):
         ida32_path, ana_file, binary_file_path)
     #p = subprocess.Popen(cmd, shell = True)
     try:
-        stdout = subprocess32.check_output(cmd, stderr=subprocess32.STDOUT, shell = True, timeout=600)
+        stdout = subprocess32.check_output(cmd, stderr=subprocess32.STDOUT, shell = True, timeout=1200)
     except Exception as e:
         print('  [-] Error Occur in IDA Pro')
         return False
